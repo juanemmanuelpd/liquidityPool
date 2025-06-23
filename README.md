@@ -1,4 +1,4 @@
-# Swap App
+# Liquidity Pool
 ## Overview 🪙
 Add and remove liquidity to the USDC - DAI pool.
 ## Features 📃
