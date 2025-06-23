@@ -1,11 +1,13 @@
 # Swap App
 ## Overview 🪙
-An app for swapping stablecoins, in this case USDC -> DAI. Forking the Arbitrum network.
+Add and remove liquidity to the USDC - DAI pool.
 ## Features 📃
 * Swap your USDC for DAI
+* Provide liquidity to the USDC-DAI pool to receive Liquidity Provider Tokens (LP Tokens)
+* Redeem your LP Tokens to receive USD and DAI from the liquidity pool
 ## Technical details ⚙️
-* Interface for swapping tokens -> Uniswap v2 Contract Deployments.
-* V2Router02 Contract Address -> 0x4752ba5dbc23f44d87826276bf6fd6b1c372ad24 (Arbitrum).
+* Uniswap V2 Swap Router Address (Arbitrum)-> 0x4752ba5DBc23f44D87826276BF6Fd6b1C372aD24.
+* Uniswap Factory Address (Arbitrum) -> 0xf1D7CC64Fb4452F05c498126312eBE29f30Fbcf9.
 * Forked network for testing -> Arbitrum.
 * RPC Server Address -> https://arb1.arbitrum.io/rpc.
 * Framework CLI -> Foundry.
