@@ -25,13 +25,16 @@ Add and remove liquidity to the USDC - DAI pool.
 9. Run `forge test -vvvv --fork-url https://arb1.arbitrum.io/rpc --match-test testSwapTokensCorrectly` to swap your 6 USDC for DAI. This is just a test on the forked Arbitrum network, so your USDC will remain in your wallet after this.
 10. Run `forge test -vvvv --fork-url https://arb1.arbitrum.io/rpc --match-test testCanAddLiquidityCorrectly` to swap half of the USDC tokens. In this case, the contract takes 6 of your USDC, so a 3 USDC swap would be made. As a reward for providing liquidity to the USDC-DAI pool, you will be awarded Liquidity Provider Tokens.
 11. Run `forge test -vvvv --fork-url https://arb1.arbitrum.io/rpc --match-test testCanRemoveLiquidityCorrectly` to redeem your Liquidity Provider Tokens for USDC and DAI from the liquidity pool.
-12. If you want to change the amount of USDC to swap, you will have to edit the `amountIn` variable in the `testSwapTokensCorrectly()` function.
-13. Run `forge coverage --fork-url https://arb1.arbitrum.io/rpc` to generate a code coverage report, which allows you to verify which parts of the "swapApp.sol" script code (in the "src" folder) are executed by the tests. This helps identify areas outside the coverage that could be exposed to errors/vulnerabilities.
+12. Run `forge coverage --fork-url https://arb1.arbitrum.io/rpc` to generate a code coverage report, which allows you to verify which parts of the "swapApp.sol" script code (in the "src" folder) are executed by the tests. This helps identify areas outside the coverage that could be exposed to errors/vulnerabilities.
 ## Functions 📌
 * `swapTokens()` -> Swap USDC for DAI.
+* `addLiquidity()` -> Contribute USDC and DAI to the USDC-DAI liquidity pool to receive Liquidity Provider Tokens.
+* `removeLiquidity()` -> Redeem your Liquidity Provider Tokens to receive USDC and DAI from the USDC-DAI liquidity pool.
 ## Testing functions ⌨️
 * `testHasBeenDeployedCorrectly()` -> Verify that the swap app has been correctly initialized with the correct router address (`uniswapV2SwapRouterAddress`).
-* `testSwapTokensCorrectly()` -> Verify that the 5 USDC to DAI swap was successful. Note: The amount of DAI you receive will vary depending on the liquidity in the USDC -> DAI liquidity pool.
+* `testSwapTokensCorrectly()` -> Verify that the 6 USDC to DAI swap was successful. Note: The amount of DAI you receive will vary depending on the liquidity in the USDC -> DAI liquidity pool.
+* `testCanAddLiquidityCorrectly()` ->
+* `testCanRemoveLiquidityCorrectly()` -> 
 ## Forge Coverage ✅
 ![Forge Coverage](images/forgeCoverage.png)  
 
