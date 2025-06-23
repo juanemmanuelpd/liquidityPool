@@ -33,8 +33,8 @@ Add and remove liquidity to the USDC - DAI pool.
 ## Testing functions ⌨️
 * `testHasBeenDeployedCorrectly()` -> Verify that the swap app has been correctly initialized with the correct router address (`uniswapV2SwapRouterAddress`).
 * `testSwapTokensCorrectly()` -> Verify that the 6 USDC to DAI swap was successful. Note: The amount of DAI you receive will vary depending on the liquidity in the USDC -> DAI liquidity pool.
-* `testCanAddLiquidityCorrectly()` ->
-* `testCanRemoveLiquidityCorrectly()` -> 
+* `testCanAddLiquidityCorrectly()` -> Verify that half of your USDC is swapped for DAI, that the USDC and DAI are contributed to the liquidity pool, and that you successfully obtain your Liquidity Provider Tokens.
+* `testCanRemoveLiquidityCorrectly()` -> Verify that your Liquidity Provider Tokens are redeemed and that you are successfully receiving USDC and DAI from the liquidity pool.
 ## Forge Coverage ✅
 ![Forge Coverage](images/forgeCoverage.png)  
 
